@@ -12,7 +12,7 @@
         // var_dump($passW);
 
 
-        // Definisco le variabili 
+        // Definisco le variabili. In Get stesso nome dell'Input perché mi compare nell'URL
     
         $passwordLenght = $_GET['numberCharacters'];
 
@@ -37,7 +37,7 @@
             for ($i = 0; $i < $num; $i++) {
                 // I numeri casuali andranno da 0 al numero di $passwordCharacters 
     
-                $numbers = rand(0, $passwordCharacters);
+                $numbers = rand(0, $characterLenght - 1);
 
                 $password[] = $passwordCharacters[$numbers];
 
@@ -70,7 +70,9 @@
     <h1>STRONG PASSWORD GENERATOR</h1>
     <form>
         <label for="password">Password casuale</label>
-        <input type="text" name="password" placeholder="Inserisci un nuemero">
+
+        <!-- Il name sarà ciò che mi ritrovo nell'URL che dovrà essere uguale al nome che do in GET -->
+        <input type="text" name="numberCharacters" placeholder="Inserisci un nuemero">
         <input type="submit" value="Generate">
     </form>
 
