@@ -7,9 +7,34 @@
     <title>php-strong-password-generator</title>
     <?php
 
-        $passW = $_GET['password'] ?? false;
+        // $passW = $_GET['password'] ?? false;
 
-        var_dump($passW);
+        // var_dump($passW);
+
+
+        // Definisco le variabili 
+    
+        $passwordLenght = $_GET['numbercaracters'];
+
+        // Definisco la funzione per generare la password casuale
+
+        function generatePassword($num) {
+
+            
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
     ?>
 
